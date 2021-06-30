@@ -5,12 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desafio Obuc</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header>
     <h1>Controle de Locais de Trabalho</h1>
+    <div class="container">
       <button>Home</button>
-      <p class="user">Usuário</p>
+      <div class="user">
+        <p>Usuário</p>
+        <p class="useuario">Administrador</p>
+      </div>
+    </div>
+    <div class="imgx"></div>
   </header>
   <aside>
     <nav>
@@ -27,14 +34,22 @@
   </aside>
   <main>
     <h2>Locais de Trabalho</h2>
-    <table class="cadastro">
+    <table class="localDeTrabalho">
       <tr>
         <td>prédio</td>
         <td>Local de Trabalho</td>
         <tr>
-          <td><input type="text"></td>
-          <td><input type="text"></td>
-          <td><button>+</button></td>
+          <td>
+            <select name="prédio" required>
+              <option value="">Prédio 1</option>
+              <option value="">Prédio 2</option>
+              <option value="">Prédio 3</option>
+              <option value="">Prédio 4</option>
+              <option value="">Prédio 5</option>
+            </select>
+          </td>
+          <td><input type="text" required></td>
+          <td><button type="submit">+</button></td>
         </tr>
       </tr>
     </table>
