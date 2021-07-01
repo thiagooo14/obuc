@@ -11,10 +11,23 @@ const creat = document.getElementById('creat');
 const build = document.getElementById('build');
 const workPlace = document.getElementById('workPlace');
 
-const render = (itn) => {
+const deletFunc = (event) => {
+  event.target.parentNode.parentNode.parentNode.parentNode.removeChild(
+    event.target.parentNode.parentNode.parentNode
+  );
+  sessionStorage.setItem('arr', JSON.stringify(arrLocaisTrabalho));
+};
+
+const render = () => {
   list.innerHTML = '';
   let index = 0;
-  arrLocaisTrabalho.forEach((location) => {
+  let xablau = JSON.parse(sessionStorage.getItem('arr'));
+  if (xablau.length === 0) {
+    // ver essa coisa talvez store.remove
+    sessionStorage.setItem('arr', JSON.stringify(arrLocaisTrabalho));
+  }
+  console.log(xablau);
+  xablau.forEach((location) => {
     const tr = document.createElement('tr');
     const td = document.createElement('td');
     const td2 = document.createElement('td');
@@ -29,13 +42,14 @@ const render = (itn) => {
     tr.appendChild(td);
     tr.appendChild(td2);
     tr.id = index;
-    
+
     editImg.src = '/image/pen.png';
     editImg.alt = 'image edit';
     editImg.className = 'btnList';
     deletImg.src = '/image/trash.png';
     deletImg.alt = 'image delet';
     deletImg.className = 'btnList';
+    delet.addEventListener('click', (event) => deletFunc(event));
     index += 1;
 
     edit.appendChild(editImg);
@@ -48,9 +62,9 @@ const render = (itn) => {
     list.appendChild(tr);
   });
 };
+
 const addList = () => {
   arrLocaisTrabalho.push({ prédio: build.value, local: workPlace.value });
-  console.log(arrLocaisTrabalho);
   sessionStorage.setItem('arr', JSON.stringify(arrLocaisTrabalho));
   render();
 };
