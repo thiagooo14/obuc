@@ -71,3 +71,22 @@ main{
   align-items: center;
   flex-direction: column;
 }
+
+.list {
+  border: #cacaca solid 1px;
+  padding: 20px;
+}
+
+.list .listTitle{
+  margin-bottom: 100px;
+}
+
+.list .listTitle td{
+  border: #000 2px solid;
+  background-color: blue;
+  padding: 5px 20px;
+}
+
+.btnList{
+  width: 15px;
+}
