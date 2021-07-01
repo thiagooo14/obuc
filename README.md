@@ -1,11 +1,11 @@
-#Desafio pratico da Obuc
+# Desafio pratico da Obuc
 - Desenvolver aplicação para controle de locais de trabalho utilizando o layout
 entregue pela empresa.
 - incluir local de trabalho atravez de um formulario
 - ter uma tabela com os registros dos cadastros
 - salvar a tabela em um array, e utilizar o sessionStorage
 
-###faltou implementar
+### faltou implementar
 - ao carregar a pagina ler o sessionStorage e devolver o array se tiver
 - caso não tenha criar o estado inicial do array
 - montar a tabela de acordo com o array recebido do session storage
