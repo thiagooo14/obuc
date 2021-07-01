@@ -15,19 +15,15 @@ const deletFunc = (event) => {
   event.target.parentNode.parentNode.parentNode.parentNode.removeChild(
     event.target.parentNode.parentNode.parentNode
   );
-  sessionStorage.setItem('arr', JSON.stringify(arrLocaisTrabalho));
 };
 
 const render = () => {
   list.innerHTML = '';
   let index = 0;
-  let xablau = JSON.parse(sessionStorage.getItem('arr'));
-  if (xablau.length === 0) {
-    // ver essa coisa talvez store.remove
-    sessionStorage.setItem('arr', JSON.stringify(arrLocaisTrabalho));
-  }
-  console.log(xablau);
-  xablau.forEach((location) => {
+  // tentando arrumar o load inicial_________________
+  // let aValue = sessionStorage.getItem('arr');
+  // const arrMain = JSON.parse(aValue);
+  arrLocaisTrabalho.forEach((location) => {
     const tr = document.createElement('tr');
     const td = document.createElement('td');
     const td2 = document.createElement('td');
