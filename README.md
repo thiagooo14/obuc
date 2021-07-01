@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # Desafio pratico da Obuc
-=======
-### Desenvolver aplicação para controle de locais de trabalho utilizando o layoutDesafio pratico da Obuc
->>>>>>> dd2b1568f458b25e5496094435e93079b60a66fb
 - Desenvolver aplicação para controle de locais de trabalho utilizando o layout
 entregue pela empresa.
 - incluir local de trabalho atravez de um formulario
